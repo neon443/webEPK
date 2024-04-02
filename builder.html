@@ -1,18 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
-		<script async src="https://arc.io/widget.min.js#HEPCFa3K"></script>
-		<meta charset="utf-8"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-		<title>ayunWebEPK</title>
-		<script type="text/javascript" src="jszip.min.js"></script>
-		<script type="text/javascript" src="pako.min.js"></script>
-		<script type="text/javascript" src="sha1.min.js"></script>
-		<script type="text/javascript" src="ayunEPKDecompiler.js"></script>
-		<script type="text/javascript" src="ayunEPKCompiler.js"></script>
-		<link rel="preconnect" href="https://fonts.googleapis.com"/>
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-		<link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet"/>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>WebEPK</title>
+		<script src="jszip.min.js"></script>
+		<script  src="pako.min.js"></script>
+		<script src="sha1.min.js"></script>
+		<script src="EPKDecompiler.js"></script>
+		<script src="EPKCompiler.js"></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
 		<style>
 			a:not([href]) {
 				display: none;
@@ -108,29 +107,29 @@
 	</head>
 	<body>
 		<sub><a href=".">Want to compile one instead?</a></sub>
-		<br/>
+		<br>
 		<sub><a href="decompile.html">Want to decompile one instead?</a></sub>
-		<h1>ayunWebEPK</h1>
+		<h1>WebEPK</h1>
 		<p>Customize EPK files in your browser!</p>
-		Select base .EPK: <input type="file" onchange="selectFile(this);" accept=".epk"/>
-		<br/>
-		Compile to legacy format: <input type="checkbox"/>
-		<br/>
+		Select base .EPK: <input type="file" onchange="selectFile(this);" accept=".epk">
+		<br>
+		Compile to legacy format: <input type="checkbox">
+		<br>
 		<button onclick="compileIt(document.querySelector('input[type=file]'));" disabled>Compile it!</button>
-		<br/>
-		<br/>
+		<br>
+		<br>
 		<progress value="0" max="1"></progress>
 		<a download="my-cool.epk">Download your EPK!</a>
 		<div id="editor" class="model">
-			<input type="text" placeholder="Search or enter file name..."/>
+			<input type="text" placeholder="Search or enter file name...">
 			<select></select>
 			<button onclick="createFile(this.previousElementSibling.previousElementSibling.value);" disabled>Create file...</button>
 			<button onclick="deleteCurrentFile();">Delete file...</button>
-			<br/>
+			<br>
 			<h3></h3>
-			Change this file: <input type="file" onchange="changeFile(this);"/>
-			<br/>
-			<img/>
+			Change this file: <input type="file" onchange="changeFile(this);">
+			<br>
+			<img>
 			<audio controls></audio>
 			<pre></pre>
 		</div>
